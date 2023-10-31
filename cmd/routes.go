@@ -9,4 +9,10 @@ func setupRoutes(app *fiber.App) {
 	app.Get("/", handlers.ListFacts)
 
 	app.Post("/fact", handlers.CreateFact)
+
+	app.Get("/fact/:id", handlers.GetFact)
+
+	app.Delete("/fact/:id", handlers.DeleteFact)
+
+	app.Put("/fact/:id", handlers.UpdateFact)
 }
